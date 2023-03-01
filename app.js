@@ -51,16 +51,45 @@
 
 //File System (fs) Module
 
-const fs = require('fs');
-// fs. all options come as either Sync or Blocking, METHOD WITH SYNC AFFIX IS BLOCKING NOT ASYNCRONOUS
-//THIS IS THE BLOCKING VERSION
-// const files = fs.readdirSync('./');
-// console.log(files);
-//THIS IS THE ASYNC VERSION
-fs.readdir('./', function(err, files) {   // location then takes a callback function with 2 parameters
-    if (err) console.log('Error', err);  
-    else console.log('Result', files);
+// const fs = require('fs');
+// // fs. all options come as either Sync or Blocking, METHOD WITH SYNC AFFIX IS BLOCKING NOT ASYNCRONOUS
+// //THIS IS THE BLOCKING VERSION
+// // const files = fs.readdirSync('./');
+// // console.log(files);
+// //THIS IS THE ASYNC VERSION
+// fs.readdir('./', function(err, files) {   // location then takes a callback function with 2 parameters
+//     if (err) console.log('Error', err);  
+//     else console.log('Result', files);
+// });
+
+//EVENTS MODULE and EVENTS ARGUMENTS
+
+const EventEmitter = require('events');  // Note Capital letters, it is a CLASS, which is a container for properties and functions
+//In order to use EventEmiiter you need to create an instance of this class
+const emitter = new EventEmitter();  //this is an object
+//Class is like Human, Object is like John      Object is an actual instance of the class
+
+//Register a listener
+//on and addListener are the same  --Takes 2 arguments('nameOfEvent', callbackFunction/Listener)
+emitter.on('messageLogged', (arg) => {   //arrow function but could be , function(arg) {}
+    console.log('Listener called', arg);
 });
+emitter.on('logging', (e) => {
+    console.log('Logging', e);
+});
+
+
+emitter.emit('logging', {data: 'message'});
+emitter.emit('messageLogged', {id : 1, url: 'http://' });  //second part is even argument
+
+//Raise: logging (data: message)
+
+
+
+
+
+
+
 
 
 
