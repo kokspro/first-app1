@@ -83,18 +83,35 @@
 // emitter.emit('messageLogged', {id : 1, url: 'http://' });  //second part is even argument
 
 //Raise: logging (data: message)
-
+//************************************************ */
+//************************************************ */
+//************************************************ */
+//************************************************ */
+//************************************************ */
 //Exercise Events using second part of logger.js
 
-const Logger = require('./logger');
-const logger = new Logger();
+// const Logger = require('./logger');
+// const logger = new Logger();
 
-logger.on('messageLogged', (arg) => {
-    console.log('Listener called', arg)
+// logger.on('messageLogged', (arg) => {
+//     console.log('Listener called', arg)
+// });
+// logger.log('Did this work also?');
+//************************************************ */
+//************************************************ */
+//************************************************ */
+//************************************************ */
+//************************************************ */
+
+//Recreation Exercise
+const ConsoleLog = require('./logger');
+const does = new ConsoleLog();
+
+does.on('emission part 1', (e) => {
+    console.log('App.js e watcher is working', e);
 });
-logger.log('Did this work also?');
 
-
+does.log('This is using the method in app.js');
 
 
 
