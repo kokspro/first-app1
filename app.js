@@ -29,8 +29,25 @@
 
 // logger.log('Did I make this work?');  //Use this when module.exports.log = log;
 
-const log = require('./logger');
-log('Did this way work too?');
+// const log = require('./logger');
+// log('Did this way work too?');
+
+//Module Wrapper Function
+
+//Path Module
+
+const path = require('path');
+var pathObj = path.parse(__filename);
+console.log(pathObj);
+
+
+
+
+
+
+
+
+
 
 
 
