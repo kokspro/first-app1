@@ -36,9 +36,19 @@
 
 //Path Module
 
-const path = require('path');
-var pathObj = path.parse(__filename);
-console.log(pathObj);
+// const path = require('path');
+// var pathObj = path.parse(__filename);
+// console.log(pathObj);
+
+
+//OS (Operating System) Module
+
+const os = require('os');
+var totalMem = os.totalmem();
+var freeMem = os.freemem();
+console.log(totalMem/1000000000);
+console.log(freeMem/1000000000);
+
 
 
 
