@@ -43,11 +43,24 @@
 
 //OS (Operating System) Module
 
-const os = require('os');
-var totalMem = os.totalmem();
-var freeMem = os.freemem();
-console.log(totalMem/1000000000);
-console.log(freeMem/1000000000);
+// const os = require('os');
+// var totalMem = os.totalmem();
+// var freeMem = os.freemem();
+// console.log(totalMem/1000000000);
+// console.log(freeMem/1000000000);
+
+//File System (fs) Module
+
+const fs = require('fs');
+// fs. all options come as either Sync or Blocking, METHOD WITH SYNC AFFIX IS BLOCKING NOT ASYNCRONOUS
+//THIS IS THE BLOCKING VERSION
+// const files = fs.readdirSync('./');
+// console.log(files);
+//THIS IS THE ASYNC VERSION
+fs.readdir('./', function(err, files) {   // location then takes a callback function with 2 parameters
+    if (err) console.log('Error', err);  
+    else console.log('Result', files);
+});
 
 
 
