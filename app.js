@@ -64,26 +64,35 @@
 
 //EVENTS MODULE and EVENTS ARGUMENTS
 
-const EventEmitter = require('events');  // Note Capital letters, it is a CLASS, which is a container for properties and functions
-//In order to use EventEmiiter you need to create an instance of this class
-const emitter = new EventEmitter();  //this is an object
-//Class is like Human, Object is like John      Object is an actual instance of the class
+// const EventEmitter = require('events');  // Note Capital letters, it is a CLASS, which is a container for properties and functions
+// //In order to use EventEmiiter you need to create an instance of this class
+// const emitter = new EventEmitter();  //this is an object
+// //Class is like Human, Object is like John      Object is an actual instance of the class
 
-//Register a listener
-//on and addListener are the same  --Takes 2 arguments('nameOfEvent', callbackFunction/Listener)
-emitter.on('messageLogged', (arg) => {   //arrow function but could be , function(arg) {}
-    console.log('Listener called', arg);
-});
-emitter.on('logging', (e) => {
-    console.log('Logging', e);
-});
+// //Register a listener
+// //on and addListener are the same  --Takes 2 arguments('nameOfEvent', callbackFunction/Listener)
+// emitter.on('messageLogged', (arg) => {   //arrow function but could be , function(arg) {}
+//     console.log('Listener called', arg);
+// });
+// emitter.on('logging', (e) => {
+//     console.log('Logging', e);
+// });
 
 
-emitter.emit('logging', {data: 'message'});
-emitter.emit('messageLogged', {id : 1, url: 'http://' });  //second part is even argument
+// emitter.emit('logging', {data: 'message'});
+// emitter.emit('messageLogged', {id : 1, url: 'http://' });  //second part is even argument
 
 //Raise: logging (data: message)
 
+//Exercise Events using second part of logger.js
+
+const Logger = require('./logger');
+const logger = new Logger();
+
+logger.on('messageLogged', (arg) => {
+    console.log('Listener called', arg)
+});
+logger.log('Did this work also?');
 
 
 
