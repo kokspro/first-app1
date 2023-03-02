@@ -115,29 +115,29 @@
 
 //HTTP MODULE FOR CREATING NETWORKING APPLICATIONS ----------------------------
 
-const http = require('http');
+// const http = require('http');
 
-// const server = http.createServer();    //server is an event emitter  
-const server = http.createServer(function(req, res) {
-    if (req.url === '/') {
-        res.write('Hello World');
-        res.end();
-    }
+// // const server = http.createServer();    //server is an event emitter  
+// const server = http.createServer(function(req, res) {
+//     if (req.url === '/') {
+//         res.write('Hello World');
+//         res.end();
+//     }
 
-    if (req.url === '/api/courses') {
-        res.write(JSON.stringify([1, 2, 3, 4, 5]));                 //here we want to return an array of objects using JSON
-        res.end();
-    }
-});    //usually pass a callback to the create server method ---Takes two parameters, request and response
+//     if (req.url === '/api/courses') {
+//         res.write(JSON.stringify([1, 2, 3, 4, 5]));                 //here we want to return an array of objects using JSON
+//         res.end();
+//     }
+// });    //usually pass a callback to the create server method ---Takes two parameters, request and response
 
-// server.on('connection', (socket) => {   not commonly done
-//     console.log('New connection...');
-// });
-server.listen(4000);    //arg is a port
+// // server.on('connection', (socket) => {   not commonly done
+// //     console.log('New connection...');
+// // });
+// server.listen(4000);    //arg is a port
 
-console.log('Listening on port 4000...');
+// console.log('Listening on port 4000...');
 
-
+//NPM
 
 
 

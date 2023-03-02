@@ -37,16 +37,16 @@
 
 //Recreation exercise
 
-const EventEmiiter = require('events');
+// const EventEmiiter = require('events');
 
-class ConsoleLog extends EventEmiiter {
-    log(message) {
-        console.log(message);
-        this.emit('emission part 1', {name: 'Rupert'});
-    }
-}
+// class ConsoleLog extends EventEmiiter {
+//     log(message) {
+//         console.log(message);
+//         this.emit('emission part 1', {name: 'Rupert'});
+//     }
+// }
 
-module.exports = ConsoleLog;
+// module.exports = ConsoleLog;
 
 
 
