@@ -25,11 +25,11 @@
 # total += 4
 # print(total)        
 
-total = 0;
-for i in range(4,64):
-    j = 0
-    while 2**j <= i:
-        total += 4
-        j += 1
+# total = 0;
+# for i in range(4,64):
+#     j = 0
+#     while 2**j <= i:
+#         total += 4
+#         j += 1
 
-print(total)
+# print(total)
