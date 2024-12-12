@@ -13,5 +13,5 @@ let first = 1;
 console.log(first);
 first = "its magically a string now";
 console.log(first);
-first = ["Wow", 1234, "Array now", 345];
+first = ["Wow", [1234, "Array now"], 345];
 console.log(first);

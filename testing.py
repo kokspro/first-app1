@@ -223,6 +223,6 @@ if __name__ == "__main__":
     rbt.print_tree(rbt.root)
     
     # Test deletion
-    print("\nAfter deleting 40:")
-    rbt.delete(40)
+    print("\nAfter deleting 50:")
+    rbt.delete(50)
     rbt.print_tree(rbt.root)
